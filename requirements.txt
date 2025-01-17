@@ -1,0 +1,7 @@
+vosk
+sounddevice
+pyttsx3
+google-generativeai
+requests
+openai
+shutil

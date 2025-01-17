@@ -1,0 +1,64 @@
+{
+    "name": "Voice Assistant TTSay",
+    "version": "1.0.0",
+    "slug": "voice_assistant",
+    "description": "Voice assistant with Vosk and Home Assistant integration.",
+    "url": "https://github.com/andymike171087/ttsay",
+    "arch": [
+      "aarch64",
+      "amd64",
+      "armv7"
+    ],
+    "startup": "services",
+    "boot": "auto",
+    "host_network": true,
+    "host_ipc": true,
+    "options": {
+      "homeassistant_url": "http://your_local_ip:8123",
+      "token": "homeassistant_token",
+      "tts_entity": "tts.google_translate_uk_com",
+      "media_player": "media_player.your_device",
+      "vosk_model_download_url": "",
+      "vosk_samplerate": 16000,
+      "ai_model": "openai",
+      "ai_model_token": "ai_model_token",
+      "activation_phrases": ["hey assistant", "activate assistant"],
+      "deactivation_phrases": ["stop", "enough", "pause"],
+      "ai_question_phrases": ["question", "can you answer", "listen"],
+      "commands": [
+        {
+          "phrases": ["start vacuum", "turn on vacuum"],
+          "entity_id": "button.start_vacuum"
+        },
+        {
+          "phrases": ["stop vacuum", "turn off vacuum"],
+          "entity_id": "button.stop_vacuum"
+        }
+      ],
+      "timeouts": {
+        "return_to_listening": 60
+      }
+    },
+    "schema": {
+      "homeassistant_url": "str",
+      "token": "str",
+      "tts_entity": "str",
+      "media_player": "str",
+      "vosk_model_download_url": "str?",
+      "vosk_model_path": "str",
+      "ai_model": "str?",
+      "ai_model_token": "str?",
+      "activation_phrases": ["str"],
+      "deactivation_phrases": ["str"],
+      "ai_question_phrases": ["str?"],
+      "commands": [
+        {
+          "phrases": ["str?"],
+          "entity_id": "str?"
+        }
+      ],
+      "timeouts": {
+        "return_to_listening": "int"
+      }
+    }
+  }
