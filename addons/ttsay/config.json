@@ -1,7 +1,7 @@
 {
     "name": "Voice Assistant TTSay",
     "version": "1.0.0",
-    "slug": "voice_assistant",
+    "slug": "ttsay",
     "description": "Voice assistant with Vosk and Home Assistant integration.",
     "url": "https://github.com/andymike171087/ttsay",
     "arch": [

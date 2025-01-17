@@ -21,7 +21,6 @@ Voice Assistant TTSay is a Home Assistant add-on that integrates with Vosk for s
 
 ---
 
-## Configuration
 
 ### Required Options
 
